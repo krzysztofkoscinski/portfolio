@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "sdet project to present my approach",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzysztofkoscinski/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/krzysztofkoscinski/portfolio/issues"
+  },
+  "homepage": "https://github.com/krzysztofkoscinski/portfolio#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.10.1",
+    "typescript-eslint": "^8.72.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10"
+  }
+}
