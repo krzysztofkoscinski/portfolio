@@ -14,6 +14,10 @@
 - Gdy ESLint jest skonfigurowany, utrzymuj go w czystym stanie. Nie dodawaj ani nie rozszerzaj ignorów, wyłączeń reguł czy dyrektyw ESLint bez mojej wyraźnej zgody.
 - W dłuższym zadaniu uruchamiaj lint na zakończenie i po uzgodnionych kamieniach milowych, nie po każdym kroku. Poza tym waliduj właściwy fragment zadania najtańszym adekwatnym testem.
 - Dla zachowań interfejsu stosuj adekwatne testy UI w Playwright. Sprawdzaj zachowanie widoczne dla użytkownika, nie szczegóły implementacji.
+- Przed implementacją testów UI uzgodnij środowisko docelowe, `baseURL`, przeglądarki i sposób dostarczania danych testowych. Nie zakładaj dostępności lokalnej aplikacji ani sekretów.
+- Testy scenariuszowe Playwright utrzymuj w `*.spec.ts`; lokatory i interakcje z UI umieszczaj w obiektach stron `tests/pages/*.page.ts`. Asercje pozostawiaj w testach, chyba że ich współdzielenie jest uzasadnione.
+- Wspólne fixture’y i konfigurację cyklu życia umieszczaj w `tests/fixtures/`. Unikaj abstrakcji, które nie usuwają rzeczywistego powtórzenia.
+- Domyślnie izoluj sesję każdego testu. Scenariusze logowania uruchamiaj w stanie wylogowanym; `storageState` stosuj tylko wtedy, gdy uzasadnia to scenariusz, generuj go poza repozytorium i nie współdziel między testami modyfikującymi sesję.
 - Dla API dodawaj lub uruchamiaj testy API adekwatne do zmienianego kontraktu, w tym odpowiedzi i istotne scenariusze błędów. Korzystaj z istniejącego stosu projektu; nie zakładaj, że API już istnieje.
 - Po zmianach uruchom adekwatną walidację, np. testy, lint, typecheck lub build, zależnie od dostępnych skryptów i zakresu. Jeśli czegoś nie da się uruchomić, powiedz dlaczego; nie przedstawiaj niewykonanych kontroli jako zaliczonych.
 
