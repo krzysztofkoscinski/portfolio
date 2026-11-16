@@ -57,6 +57,7 @@ Testy można też uruchomić ręcznie w GitHub: otwórz **Actions** → **Playwr
 ## Szczegóły
 
 - Testy znajdują się w katalogu `tests/`.
+- Testy API Restful Booker znajdują się w `tests/api/`; można uruchomić je bez przeglądarek poleceniem `npx playwright test --project=api`.
 - Dokumentacja przypadków i zasady ich utrzymania znajdują się w `tests/*-test-cases.md`, `tests/banking-functional-test-cases.md` oraz `tests/test-case-guidelines.md`.
 - Konfiguracja Playwright znajduje się w pliku `playwright.config.ts`.
 - Obecna konfiguracja uruchamia testy w Chromium, Firefox i WebKit.

@@ -40,6 +40,7 @@
 ## Uruchamianie automatyzacji
 
 - Wszystkie testy: `npx playwright test`
+- Tylko testy API: `npx playwright test --project=api`
 - Konkretny plik: `npx playwright test tests/login.spec.ts`
 - Tylko przypadek po ID, np.: `npx playwright test --grep "TC-REG-004"`
 - Raport HTML: `npx playwright show-report`

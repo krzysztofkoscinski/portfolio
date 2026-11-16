@@ -14,7 +14,9 @@ Krótki zapis zweryfikowanych informacji. Aktualizuj po potwierdzeniu trwałych 
 - ESLint używa flat config w `eslint.config.mjs`, sprawdza JavaScript/TypeScript i pomija pliki Markdown. `npm run lint` uruchamia sprawdzanie.
 - Husky uruchamia `npm run lint` w hooku `.husky/pre-commit`; lokalny hook można ominąć przez `git commit --no-verify`.
 - `package.json` zawiera zależności Prettier, Husky i dotenv; sama obecność pakietu nie potwierdza jego konfiguracji ani użycia.
-- Playwright ładuje zmienne z `.env/.env.default`, a w razie jego braku z `.env/.env.default.example`; wartość `BASE_URL` ustawiona w środowisku procesu ma pierwszeństwo. Nie potwierdzono konfiguracji testów API.
+- Playwright ładuje zmienne z `.env/.env.default`, a w razie jego braku z `.env/.env.default.example`; wartość `BASE_URL` ustawiona w środowisku procesu ma pierwszeństwo.
+- Testy Restful Booker są w `tests/api/`, używają wbudowanego fixture Playwright `request` i projektu `api`, dzięki czemu nie uruchamiają się osobno dla Chromium, Firefox i WebKit. `API_BASE_URL` domyślnie wskazuje `https://restful-booker.herokuapp.com`.
+- Testy API obejmują health check, uwierzytelnianie, CRUD rezerwacji, filtry nazw, brak autoryzacji, niekompletny payload i odpowiedź XML. Filtry dat nie są asertowane, ponieważ obserwowane wyniki publicznego demo są niespójne z dokumentacją; demo zwraca też `500` dla niekompletnego payloadu i `text/html` dla treści XML.
 - Obiekty stron Playwright znajdują się w `tests/pages/`, a wspólne fixture’y w `tests/fixtures/`. Każdy test korzysta z izolowanego kontekstu; testy logowania nie używają współdzielonego `storageState`.
 
 ## Do doprecyzowania
