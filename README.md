@@ -52,6 +52,8 @@ Projekt SDET (Software Development Engineer in Test), którego celem jest prezen
 	npm run lint
 	```
 
+Testy można też uruchomić ręcznie w GitHub: otwórz **Actions** → **Playwright Tests** → **Run workflow**, wybierz gałąź i zatwierdź **Run workflow**.
+
 ## Szczegóły
 
 - Testy znajdują się w katalogu `tests/`.
