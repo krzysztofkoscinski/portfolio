@@ -21,5 +21,5 @@ Bezpieczne kontrole odczytowe dla wszystkich zakładek są w `tests/banking-read
 ## Pozostałe zadania
 
 - [ ] Doprecyzować cel portfolio, odbiorców i docelowe środowisko testowe poza domyślnym demo.
-- [ ] Ustalić wymagania i zakres testów API.
+- [ ] Potwierdzić semantykę filtrów dat, walidację niekompletnego payloadu i nagłówek Content-Type dla odpowiedzi XML w Restful Booker.
 - [ ] Rozważyć lint w GitHub Actions i wymagany status CI, jeśli potrzebna jest ochrona przed pominięciem hooka.
