@@ -10,7 +10,7 @@ Krótki zapis zweryfikowanych informacji. Aktualizuj po potwierdzeniu trwałych 
 - `tests/navigation.spec.ts` sprawdza sekcje panelu demonstracyjnego; w widoku John Doe Dashboard pokazuje transakcje, a History pustą listę. Oczekiwana zgodność tych danych wymaga potwierdzenia.
 - `tests/banking-read-only.spec.ts` zawiera bezpieczne kontrole funkcji panelu bez przelewów, płatności ani zapisu zmian profilu.
 - Przypadki testowe są dokumentowane per funkcja w `tests/login-test-cases.md`, `tests/registration-test-cases.md` i `tests/banking-functional-test-cases.md`; ostatni plik zawiera propozycje, które wymagają danych testowych i potwierdzenia reguł biznesowych. Zasady, szablon i polecenia opisuje `tests/test-case-guidelines.md`.
-- GitHub Actions wykonuje `npm ci`, instaluje przeglądarki Playwright i uruchamia `npx playwright test` dla push/PR do `main` lub `master`.
+- GitHub Actions wykonuje `npm ci`, instaluje przeglądarki Playwright i uruchamia `npx playwright test` dla push/PR do `main` lub `master`; workflow można też uruchomić ręcznie z zakładki Actions przez `workflow_dispatch`.
 - ESLint używa flat config w `eslint.config.mjs`, sprawdza JavaScript/TypeScript i pomija pliki Markdown. `npm run lint` uruchamia sprawdzanie.
 - Husky uruchamia `npm run lint` w hooku `.husky/pre-commit`; lokalny hook można ominąć przez `git commit --no-verify`.
 - `package.json` zawiera zależności Prettier, Husky i dotenv; sama obecność pakietu nie potwierdza jego konfiguracji ani użycia.
